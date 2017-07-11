@@ -55,7 +55,6 @@ def _get_config_name():
   p = subprocess.Popen('git config --get user.name', shell=True,
                        stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
   output = p.stdout.readlines()
-  print(output[0])
   return _stripslashes(output[0].decode('utf-8'))
 
 
